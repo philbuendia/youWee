@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YOUWEE BASEBALL &mdash; Atari Era</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="cabinet">
+  <header>
+    <h1>&#9733; YOUWEE BASEBALL &#9733;</h1>
+    <p class="sub">ATARI-ERA &middot; CAMERA IS THE CONTROLLER</p>
+  </header>
+
+  <div id="screen-wrap">
+    <canvas id="game" width="192" height="128"></canvas>
+    <div id="scanlines"></div>
+  </div>
+
+  <div id="role-bar">
+    <button id="btn-pitcher" type="button">1 &ndash; PITCHER</button>
+    <button id="btn-batter" type="button">2 &ndash; BATTER</button>
+    <label class="name-label">NAME <input id="player-name" maxlength="10" value="PLAYER1" autocomplete="off"></label>
+  </div>
+
+  <div id="camera-bar">
+    <button id="btn-camera" type="button">ENABLE CAMERA</button>
+    <div id="motion-meter"><div id="motion-fill"></div></div>
+    <span id="motion-label">MOTION 0%</span>
+  </div>
+
+  <p id="camera-msg" class="hidden"></p>
+  <p id="net-msg" class="hidden"></p>
+
+  <footer>
+    <p>MOVE: &larr;/&rarr; or A/D &middot; SWING/THROW: SPACE &middot; START: ENTER &middot; CAMERA: M &middot; RESET: R</p>
+    <p>WAVE YOUR HAND / LEAN SIDE TO SIDE TO MOVE &middot; QUICK JAB TO SWING OR THROW</p>
+  </footer>
+
+  <video id="cam" playsinline muted autoplay></video>
+  <canvas id="cam-buffer" width="48" height="36"></canvas>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
